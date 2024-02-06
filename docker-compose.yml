@@ -1,0 +1,18 @@
+version: '3.0'
+services:
+  next-app:
+    build: .
+    container_name: next-app
+    volumes:
+      - ./src:/app
+      - node_modules:/app/next-app/node_modules
+    ports:
+      - "3050:3000"
+    environment:
+      - WATCHPACK_POLLING=true
+    working_dir: "/app/next-app"
+    command: "npm run dev"
+    tty: true
+
+volumes:
+  node_modules:
