@@ -10,7 +10,7 @@ services:
     environment:
       - WATCHPACK_POLLING=true
     working_dir: "/app/next-app"
-    command: "npm run dev"
+    # command: "npm run dev"
     tty: true
 
 volumes:
